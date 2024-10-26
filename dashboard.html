@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProTalk</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .header {
+            background-color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo-wrapper {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            width: 50px; /* Adicione uma imagem de logotipo se desejar */
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .logo span.red {
+            color: red;
+        }
+
+        .logo span.black {
+            color: black;
+        }
+
+        .slogan {
+            font-size: 16px;
+            color: #555;
+            margin-left: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .banner {
+            background-image: url('image1.jpg'); /* Imagem inicial */
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            transition: background-image 1s ease-in-out; /* Suaviza a transição da imagem de fundo */
+        }
+
+        .banner-text {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 90%; /* Adiciona um limite de largura para dispositivos menores */
+        }
+
+        .banner-text h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .banner-text p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            background-color: red;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #cc0000;
+        }
+
+        .cta-button:active {
+            transform: scale(0.95); /* Animação de clique */
+        }
+
+        .section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        /* Carrossel de Materiais */
+        .carousel-wrapper {
+            position: relative;
+            overflow: hidden; /* Oculta cartões fora da área visível */
+        }
+
+        .materials-carousel {
+            display: flex;
+            overflow-x: auto; /* Permite rolagem horizontal */
+            scroll-behavior: smooth;
+            padding: 20px 0; /* Espaçamento vertical */
+        }
+
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            min-width: 300px;
+            margin-right: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: left;
+            flex: 0 0 auto; /* Impede que os cartões encolham */
+        }
+
+        .card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .contact-whatsapp {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+            text-align: center;
+        }
+
+        .contact-whatsapp a {
+            text-decoration: none;
+            color: #25d366;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .banner-text h1 {
+                font-size: 28px; /* Ajusta o tamanho do título */
+            }
+
+            .banner-text p {
+                font-size: 18px; /* Ajusta o tamanho do texto */
+            }
+
+            .section h2 {
+                font-size: 24px; /* Ajusta o tamanho do título da seção */
+            }
+
+            .cta-button {
+                font-size: 16px; /* Ajusta o tamanho do botão */
+            }
+
+            .card {
+                min-width: 200px; /* Largura mínima para dispositivos menores */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo-wrapper">
+            <img src="images/logoi.png" alt="Logo" class="logo-img"> <!-- Substitua por uma imagem de logotipo -->
+            <div>
+                <div class="logo">
+                    <span class="red">Pro</span><span class="black">Talk</span>
+                </div>
+                <p class="slogan">Talk, learn, and conquer with us</p> <!-- Slogan em tamanho menor -->
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Avançar.html">Avançar</a></li>
+                <li><a href="about.html">Sobre</a></li>
+                <li><a href="https://wa.me/+258875468262">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="banner" id="banner">
+        <div class="banner-text">
+            <h1>Materiais de Aulas</h1>
+            <p>Explore os melhores recursos e materiais para suas aulas de inglês.</p>
+            <button class="cta-button" onclick="window.location.href='https://drive.google.com/drive/folders/1E3QAvzs0KtopkBDlwM1WtfnmLD-yEaj8?usp=sharing_LINK_COPIADO_AQUI'">Ver Materiais</button>
+        </div>
+    </section>
+
+    <!-- Main Section with Carousel -->
+    <section class="section">
+        <h2>Nossos Materiais</h2>
+        <div class="carousel-wrapper">
+            <div class="materials-carousel" id="carousel">
+                <div class="card">
+                    <h3>Gramática</h3>
+                    <p>Aprenda e pratique a gramática inglesa com nossos exercícios interativos.</p>
+                </div>
+                <div class="card">
+                    <h3>Vocabulário</h3>
+                    <p>Expanda seu vocabulário com listas temáticas e dicas para memorização.</p>
+                </div>
+                <div class="card">
+                    <h3>Conversação</h3>
+                    <p>Pratique sua conversação com actividades e materiais voltados para o uso real da língua.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <div class="contact-whatsapp">
+        <p>Contact us via <a href="https://wa.me/+258875468262" target="_blank">WhatsApp</a></p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 ProTalk. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript para animação e mudança de fundo -->
+    <script>
+        const images = [
+            '/image1.jpg', // Substitua por URLs de suas imagens
+            'image2.jpg',
+            'image3.jpg'
+        ];
+        let currentIndex = 0;
+
+        function changeBackground() {
+            currentIndex = (currentIndex + 1) % images.length;
+            document.getElementById('banner').style.backgroundImage = `url(${images[currentIndex]})`;
+        }
+
+        setInterval(changeBackground, 5000); // Muda a imagem a cada 5 segundos
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+
+
+
+
+  
